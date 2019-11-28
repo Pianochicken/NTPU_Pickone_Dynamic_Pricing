@@ -5,7 +5,7 @@
    * Google Colab - Python 3.6
 * ### Predict model
    * Logistic Regression Model
-   * Sk-learn
+   * Package: Sk-learn
    * Train/Validation/Test: 60/20/20
 * ### Dataset:
    1. Total Database using Variable: All related data.
@@ -25,7 +25,7 @@
          * per_person_price ( price / people )
          * time_group ( 1: start ~ 12:00, 2: 12:00 ~ 14:00, 3: 14:00 ~ 18:00, 4: 18:00 ~ end )
          * weekday ( 1: Mon. .... 7: Sun. )
-         * hours ( rending hours )
+         * hours ( renting hours )
 
 * ### ER model:
 
