@@ -34,11 +34,12 @@
    * 第四段： Model Trianing 
       1. 讀取 Final Fake & Real Orders.csv 檔案。
       2. 訓練總體模型（Locate）及個體模型（Space）。 
+      3. 比較總、個體模型的準確率，根據不同 space 選擇使用準確較高的模型，進行預訂率預測。 
      
    * 第五段： Price Predicting & Setting 
-      1. 計算每個 Space 的 Leadtime，判斷預訂時間是否在 平均Leadtime 的正負一個標準差區間內。 
-      2. 若是，使用總個體模型中較高的其一模型，進行預訂率預測，根據預訂率決定漲價與否。若否，則維持原價。 
-      3. 最終產生一個可對應的 Price Table。 
+      1. 計算每個 space 的 leadtime，判斷預訂時間是否在 平均Leadtime 的正負一個標準差區間內。 
+      2. 對照到 space 預訂率，判斷應漲價與否。
+      2. 最終產生一個可對應的 Price Table。 
 
 * ### Running Environment
    * Google Colab - Python 3.6
