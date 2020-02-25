@@ -6,7 +6,7 @@
 * ### Predict model
    * Logistic Regression Model
    * Package: Sk-learn
-   * Train/Validation/Test: 60/20/20
+   * Train/Test: 80/20
 * ### Dataset:
    1. Total Database using Variable: All related data.
    2. Predict Model using Variable:
