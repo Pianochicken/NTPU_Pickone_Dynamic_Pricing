@@ -5,7 +5,7 @@
     1. Git Clone 此專案。　    
     2. 將 Data 內的 Programmation Data 資料夾上傳至雲端硬碟。 　
     3. 將 Data/Code 內的 Pickone_Dynamic_Pricing.ipynb 檔案上傳至 Google Colab。 　
-    4. 開啟 ipynb 檔案並執行。
+    4. 在 Google Colab 開啟檔案並執行。（在上方 Runtime 的 Change runtime type 可改用 GPU 執行，速度較快）
 
   * #### 方法二（Local，Jupyter Notebook）：
     1. Git Clone 此專案。
@@ -14,11 +14,11 @@
 
 * ### 程式會使用到的資料表：
    * #### 原始資料表：
-      1. spaces(mrt).csv (自動化：將程式內路徑替換成最新的spaces.csv)
-      2. old_new_order_original.csv (自動化：將程式內路徑替換成最新的orders.csv)
+      1. spaces.csv (檔案需替換成最新的spaces.csv)
+      2. orders.csv (檔案需替換成最新的orders.csv)
       3. god_account_view.csv
       4. spaces_devices.csv
-      5. spaces_first_time_upload.csv（第一次給予的spaces.csv，取其updated_at的時間）
+      5. spaces_first_time_upload.csv（第一次給予的spaces.csv，取其updated_at的時間，此檔案需保留。）
    
    * #### 程式內產生的資料表：
       1. space_device (Tranfer).csv （將space_device檔案內容轉置，以供後續使用） 
