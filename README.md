@@ -24,7 +24,7 @@
       1. space_device (Tranfer).csv （將space_device檔案內容轉置，以供後續使用） 
       2. Real_Order.csv 以及 Space_info.csv （產生假訂單需要的檔案）
       3. Fake_Orders_in_Real_Orders_Time.csv （依據真實訂單的資料，產生有訂單當日但未出租時段的假訂單） 
-      4. Fake_Orders_in_Empty_Time.csv （依據Space房間的資訊，產生自該房間創立到關閉的未出租時段的假訂單） 
+      4. Fake_Orders_in_Empty_Time.csv （依據Space房間的資訊，產生自創立到關閉的未出租時段的假訂單） 
       5. Final Fake & Real Orders.csv （丟進預測模型、包含真假訂單狀況的總資料檔案）
       6. final_table.csv（最後客戶下訂所參照的表格，決定是否調整價格）
 
@@ -35,8 +35,7 @@
        
    * #### 第二段： Fake Order Generation 產生假訂單 
       * 產生 Fake_Orders_in_Real_Orders_Time.csv （依據真實訂單的資料，產生有訂單當日但未出租時段的假訂單） 
-      * 產生 Fake_Orders_in_Empty_Time.csv （依據Space房間的資訊，產生自該房間創立到關閉的未出租時段的假訂單） 
-      * 自動化：在 part2-2 的 end_date 設定，若未來要使用最新資料則將註解的兩行解除。
+      * 產生 Fake_Orders_in_Empty_Time.csv （依據Space房間的資訊，產生自創立到關閉的未出租時段的假訂單） 
        
    * #### 第三段： Fake & Real Orders: Combine and Filter Overlapping Parts 真假訂單合併
       * 產生 Final Fake & Real Orders.csv （丟進預測模型、包含真假訂單狀況的總資料檔案）
@@ -44,11 +43,13 @@
    * #### 第四段： Model Trianing 訓練模型
       * 訓練總體模型（Locate）及個體模型（Space）。 
       * 比較總、個體模型的準確率，根據不同 space 選擇使用準確較高的模型，進行預訂率預測。 
+      * 計算每個 space 在各個時段的出租預測機率。
      
    * #### 第五段： Price Predicting & Setting 
-      * 計算每個 space 的 leadtime，判斷預訂時間是否在 平均Leadtime 的正負一個標準差區間內。 
-      * 對照到 space 預訂率，判斷應漲價與否。
+      * 計算每個 space 的 平均leadtime 以及 標準差 Standard deviation。 
       * 最終產生一個可供參考對應的 final_table.csv。
+      * 對照表格的 space 預訂率，作為漲價與否的依據。
+
 
 * ### Running Environment
    * Google Colab - Python 3.6
