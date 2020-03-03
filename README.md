@@ -29,16 +29,17 @@
       6. final_table.csv（最後客戶下訂所參照的表格，決定是否調整價格）
 
 
-* ### 程式說明（共分為五個部分）：
+* ### 程式簡介（共分為五個部分）：
    * #### 第一段： Data Processing 資料處理  
-      * 產生 Real_Order.csv & Space_info.csv （產生假訂單需要的檔案） 
+      * 將資料依據 Working Log/Working Process Record.docx 進行處理。
+      * 產生 Real_Order.csv & Space_info.csv 
        
    * #### 第二段： Fake Order Generation 產生假訂單 
-      * 產生 Fake_Orders_in_Real_Orders_Time.csv （依據真實訂單的資料，產生有訂單當日但未出租時段的假訂單） 
-      * 產生 Fake_Orders_in_Empty_Time.csv （依據Space房間的資訊，產生自創立到關閉的未出租時段的假訂單） 
+      * 產生 Fake_Orders_in_Real_Orders_Time.csv 
+      * 產生 Fake_Orders_in_Empty_Time.csv
        
    * #### 第三段： Fake & Real Orders: Combine and Filter Overlapping Parts 真假訂單合併
-      * 產生 Final Fake & Real Orders.csv （丟進預測模型、包含真假訂單狀況的總資料檔案）
+      * 產生 Final Fake & Real Orders.csv
        
    * #### 第四段： Model Trianing 訓練模型
       * 訓練總體模型（Locate）及個體模型（Space）。 
@@ -65,7 +66,6 @@
       1. orders
          * status ( 1: Fake order, 2: Real order )
       2. spaces
-         * people
          * size
          * devices ( 0 ~ 19 )
       3. New created variable
