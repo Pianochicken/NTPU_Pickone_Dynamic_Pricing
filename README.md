@@ -11,7 +11,7 @@
     1. Git Clone 此專案。
     2. 使用 jupyter notebook 開啟 Data/Code 內的 Pickone_Dynamic_Pricing(jupyter).ipynb 檔案。
     3. 執行程式。
-
+  
 * ### 程式會使用到的資料表：
    * #### 原始資料表：
       1. spaces.csv
@@ -50,6 +50,14 @@
       * 計算每個 space 的 平均leadtime 以及 標準差 Standard deviation。 
       * 最終產生一個可供參考對應的 final_table.csv。
       * 對照表格的 space 預訂率，作為漲價與否的依據。
+
+* ### Appendix： Leadtime 標準差
+  * #### Leadtime 標準差（Google Colab）：
+    1. Git Clone 此專案。　    
+    2. 將 Data 內的 Programmation Data 資料夾上傳至雲端硬碟。 　
+    3. 將 Data/Code 內的 Normal_Distribution_of_Separate_Timegroups.ipynb (分時段)
+        & Normal_Distribution_of_Total_Orders.ipynb (全時段) 檔案上傳至 Google Colab。 
+    4. 在 Google Colab 開啟檔案並執行。（在上方 Runtime 的 Change runtime type 可改用 GPU 執行，速度較快）
 
 
 * ### Running Environment
