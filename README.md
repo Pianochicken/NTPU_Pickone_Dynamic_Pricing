@@ -14,8 +14,8 @@
 
 * ### 程式會使用到的資料表：
    * #### 原始資料表：
-      1. spaces.csv (檔案需替換成最新的spaces.csv)
-      2. orders.csv (檔案需替換成最新的orders.csv)
+      1. spaces.csv
+      2. orders.csv
       3. god_account_view.csv
       4. spaces_devices.csv
       5. spaces_first_time_upload.csv（第一次給予的spaces.csv，取其updated_at的時間，此檔案需保留。）
